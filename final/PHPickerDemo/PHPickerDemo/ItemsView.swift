@@ -13,7 +13,7 @@ struct ItemsView: View {
     @ObservedObject var mediaItems = PickedMediaItems()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(mediaItems.items, id: \.id) { item in
                 ZStack(alignment: .topLeading) {
                     if item.mediaType == .photo {
